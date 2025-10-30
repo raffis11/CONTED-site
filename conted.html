@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CONTED — Contabilidade com clareza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+  --bg:#0a0a0a;       /* preto de base */
+  --card:#141414;     /* cinza escuro para destaque */
+  --accent:#b30000;   /* vermelho firme */
+  --muted:#cccccc;    /* texto secundário */
+  --glass: rgba(255,255,255,0.05);
+  --radius:14px;
+  color-scheme: dark;
+}
+
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background:linear-gradient(135deg,var(--accent),#330000);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:24px;
+    }
+    .container{max-width:1100px;margin:0 auto}
+
+    header{
+      display:flex;align-items:center;justify-content:space-between;margin-bottom:28px
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#4f46e5);display:flex;align-items:center;justify-content:center;font-weight:800;color:#042a3a}
+    .brand h1{font-size:20px;margin:0}
+    nav{display:flex;gap:14px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    .cta{background:var(--accent);color:#042a3a;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-bottom:28px}
+    .hero-card{background:linear-gradient(180deg,var(--card),rgba(11,18,32,0.7));padding:28px;border-radius:var(--radius);backdrop-filter:blur(6px);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    .kicker{color:var(--accent);font-weight:700;letter-spacing:0.6px}
+    .lead{font-size:28px;margin:12px 0 8px}
+    .sub{color:var(--muted);margin:0 0 18px}
+    .features{display:flex;flex-wrap:wrap;gap:12px}
+    .chip{background:var(--glass);padding:10px 12px;border-radius:10px;font-weight:600;color:var(--muted)}
+
+    /* Right hero box */
+    .box-right{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(125,211,252,0.06), rgba(79,70,229,0.02));border:1px solid rgba(255,255,255,0.03)}
+    .price{font-size:18px;font-weight:800;color:#071b24}
+    .plan{background:linear-gradient(90deg,var(--accent),#60a5fa);padding:10px;border-radius:10px;color:#042a3a;font-weight:800;text-align:center}
+
+    /* Services */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:26px 0}
+    .card{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .card h3{margin:0 0 8px}
+    .muted{color:var(--muted);font-size:14px}
+
+    /* Contact */
+    .contact{display:flex;gap:18px;align-items:flex-start;margin-top:18px}
+    form{flex:1;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:12px}
+    label{display:block;font-weight:600;margin:10px 0 6px}
+    input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    button{margin-top:12px;padding:12px 14px;border-radius:10px;border:0;background:var(--accent);font-weight:700;color:#042a3a}
+
+    footer{margin-top:34px;color:var(--muted);font-size:14px;text-align:center}
+
+    /* responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      .grid{grid-template-columns:repeat(1,1fr)}
+      nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">C</div>
+        <div>
+          <h1>CONTED</h1>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px">Contabilidade com clareza</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+        <a class="cta" href="#contato">Agende uma consultoria</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card">
+        <div class="kicker">FINANÇAS QUE FAZEM SENTIDO</div>
+        <h2 class="lead">Seu negócio no azul — com alma e método.</h2>
+        <p class="sub">Nós da CONTED traduzimos números em decisões. Simples, direto, sem rodeios — do imposto até o fluxo de caixa.</p>
+        <div class="features">
+          <div class="chip">Contabilidade Fiscal</div>
+          <div class="chip">Folha & RH</div>
+          <div class="chip">Planejamento Tributário</div>
+          <div class="chip">Gestão Financeira</div>
+        </div>
+
+        <div style="display:flex;gap:12px;margin-top:18px;align-items:center">
+          <a class="cta" href="#contato">Fale com a gente</a>
+          <a style="color:var(--muted);text-decoration:none;font-weight:700" href="#servicos">Conheça os serviços →</a>
+        </div>
+
+        <div style="margin-top:18px;color:var(--muted);font-size:13px">
+          <strong>Atendimento:</strong> Empresas pequenas e médias · Simplicidade e segurança
+        </div>
+      </div>
+
+      <aside class="box-right">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <div>
+            <div style="font-size:12px;color:var(--muted)">Plano inicial</div>
+            <div class="price">A partir de <strong style="font-size:20px;color:var(--accent)">R$ 349 / mês</strong></div>
+          </div>
+          <div style="width:56px;height:56px;border-radius:10px;background:rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;font-weight:700">PJ</div>
+        </div>
+        <div class="plan">Consultoria mensal + relatórios</div>
+
+        <ul style="margin:14px 0 0;padding-left:18px;color:var(--muted);font-size:14px">
+          <li>Relatório financeiro mensal</li>
+          <li>Assessoria tributária básica</li>
+          <li>Atendimento remoto</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="servicos">
+      <h2 style="margin-bottom:8px">Nossos serviços</h2>
+      <p class="muted">Tudo que você precisa para tocar a empresa sem dor de cabeça.</p>
+
+      <div class="grid" style="margin-top:14px">
+        <div class="card">
+          <h3>Contabilidade Fiscal</h3>
+          <p class="muted">Escrituração, obrigações acessórias e demonstrações contábeis embaladas com responsabilidade.</p>
+        </div>
+        <div class="card">
+          <h3>Folha de Pagamento & RH</h3>
+          <p class="muted">Cálculos, admissões, rescisões e suporte trabalhista para manter seu time em ordem.</p>
+        </div>
+        <div class="card">
+          <h3>Planejamento Tributário</h3>
+          <p class="muted">Mapeamento de oportunidades legais para reduzir custos tributários sem risco.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" style="margin-top:18px">
+      <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+        <div style="flex:1;min-width:260px">
+          <h2>Quem somos</h2>
+          <p class="muted">Na CONTED acreditamos que contabilidade é mais do que números: é confiança. Somos um time pequeno, especializado em entregar informação útil para decidir com segurança.</p>
+        </div>
+        <div style="width:320px">
+          <div class="card" style="padding:12px">
+            <strong style="display:block">Equipe</strong>
+            <div class="muted" style="margin-top:6px">Contadores certificados · Consultores fiscais · Analistas financeiros</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="contact">
+      <form onsubmit="handleSubmit(event)">
+        <h3>Vamos conversar</h3>
+        <p class="muted">Deixe seu contato e falamos sobre a solução ideal pro seu negócio.</p>
+
+        <label for="nome">Nome</label>
+        <input id="nome" required placeholder="Seu nome">
+
+        <label for="empresa">Empresa</label>
+        <input id="empresa" placeholder="Nome da empresa (opcional)">
+
+        <label for="email">E‑mail</label>
+        <input id="email" type="email" required placeholder="seu@exemplo.com">
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" rows="4" placeholder="Qual a sua maior dúvida?"></textarea>
+
+        <button type="submit">Enviar solicitação</button>
+      </form>
+
+      <div style="width:320px">
+        <div class="card">
+          <strong>Contato</strong>
+          <p class="muted" style="margin-top:6px">Rua Exemplo, 123 · São Paulo · (11) 99999‑9999</p>
+          <p class="muted">Horário: Seg–Sex 09:00–18:00</p>
+
+          <div style="margin-top:10px">
+            <strong style="display:block">Atendimento Express</strong>
+            <div class="muted" style="margin-top:6px">Agende uma consultoria rápida de 30 minutos.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> CONTED • Todos os direitos reservados • Feito com carinho (e planilhas)
+    </footer>
+  </div>
+
+  <script>
+    // pequeno script para interação da página
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function handleSubmit(e){
+      e.preventDefault();
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
+      if(!nome || !email){
+        alert('Por favor, preencha nome e e‑mail.');
+        return;
+      }
+
+      // Simula envio — aqui você pode integrar com backend
+      alert('Obrigado, ' + nome + '! Recebemos sua solicitação. Em breve entraremos em contato.');
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
